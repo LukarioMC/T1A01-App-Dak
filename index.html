@@ -17,19 +17,19 @@
     <div style="color:lime;)">OH <b style="font-size: 40px;">HELLO</b> THERE</div>
 	  <br><br>
 
-	  <input id="input1" type=text value="WoW">
+	  <input id="input1" type=text placeholder="Your custom text here.">
 	  <br><br>
 
 	  <input type=button value="Run WoW" onClick="
 	  	myOut = document.getElementById('myArea');
 	  	for(i=1; i<=7; i++){
-        myOut.innerHTML += ' ' + i + ':';
+        		myOut.innerHTML += ' ' + i + ':';
 	  		if(i==3 || i==7){
 	  			myOut.innerHTML += ' Cool';
 	  		} else{
-          myOut.innerHTML += ' ' + document.getElementById('input1').value;
-        }
-        myOut.innerHTML += '<br>';
+          			myOut.innerHTML += ' ' + document.getElementById('input1').value;
+        		}
+        		myOut.innerHTML += '<br>';
 	  	}">
 	  <br><br>
 
