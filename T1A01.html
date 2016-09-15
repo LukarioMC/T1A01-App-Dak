@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frankmeihatehtmlgames</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+      html {
+        font-family: "Open Sans", "Wingdings", sans-serif;
+        background-image:url('bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function printLines(){
+        myOut = document.getElementById('myArea');
+  	  	for(i=1; i<=7; i++){
+          		myOut.innerHTML += ' ' + i + ':';
+  	  		if(i==3 || i==7){
+  	  			myOut.innerHTML += ' Cool';
+  	  		} else{
+            			myOut.innerHTML += ' ' + document.getElementById('input1').value;
+          		}
+          		myOut.innerHTML += '<br>';
+  	  	}
+      }
+    </script>
+  </head>
+  <body>
+    <div style="color:lime;">OH <b style="font-size: 40px;">HELLO</b> THERE</div>
+	<br><br>
+
+	<input id="input1" type=text value="WoW">
+	<br><br>
+
+	<input type=button value="Run WoW" onClick="printLines()">
+	<br><br>
+
+	<div id="myArea"> Your Output will go here.</div>
+	<br>
+
+	<input type=button value="Show myOut" onClick="alert('The var myOut contains: ' + myOut.outerHTML)">
+  </body>
+</html>

@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Frankmeihatehtmlgames</title>
-    <style>
-      html{
-        	font-family: "Comic Sans MS";
-		background-image:url('bg.jpg');
-		background-size: cover;
-		background-position: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div style="color:lime;)">OH <b style="font-size: 40px;">HELLO</b> THERE</div>
-	<br><br>
-	
-	<input id="input1" type=text value="WoW">
-	<br><br>
-	
-	<input type=button value="Run WoW" onClick="
-		myOut = document.getElementById('myArea');
-		for(i=1; i<=17; i++){ //Max 17270 for normal strings
-			myOut.innerHTML += ' ' + document.getElementById('input1').value;
-			if(i==3){
-				myOut.innerHTML += ' Cool';
-			}
-		}">
-	<br><br>
-	
-	<div id="myArea"> Your Output will go here.</div>
-	<br>
-	
-	<input type=button value="Show myOut" onClick="alert('The var myOut contains: ' + myOut.outerHTML)">
-  </body>
+<html lang="en">
+<head>
+  <title>Index</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image:url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    h1 {
+      text-align: center;
+    }
+    #container {
+      width: 30%;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.40);
+      border-radius: 10px;
+      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>List of Webpages</h1>
+    <br>
+
+    <ul>
+      <li><a href="T1A01.html">T1A01</a></li>
+      <li><a href="T1A02-Show.html">T1A02</a></li>
+    </ul>
+  </div>
+</body>
 </html>
