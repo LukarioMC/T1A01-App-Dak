@@ -17,18 +17,19 @@
     }
   </style>
   <script>
-    function calculate(){
-      operator = document.getElementById('operator').value;
-      in1 = parseInt(document.getElementById('in1').value);
-      in2 = parseInt(document.getElementById('in2').value);
-      total = 0;
-
-      if(operator == "mult"){ total = in1 * in2 }
-      else if(operator == "div"){ total = in1 / in2 }
-      else if(operator == "add"){ total = in1 + in2 }
-      else if(operator == "sub"){ total = in1 - in2 }
-      else if(operator == "pwr"){
-        total = 1;
+	function calculate(input1, input2){
+	  op = document.getElementById('sign').value;
+      in1 = parseInt(document.getElementById(input1).value);
+      in2 = parseInt(document.getElementById(input2).value);
+	  total = 1;
+	  if(op == "mult"){ total = in1 * in2 }
+      else if(op == "div"){ total = in1 / in2 }
+      else if(op == "add"){ total = in1 + in2 }
+      else if(op == "sub"){ total = in1 - in2 }
+      else if(op == "pwr"){
+		if(in1 <= 0 || in2 <= 0){
+			total = "Input a positive number";
+		}
         for(i=1; i <= in2; i++){ total *= in1 }
       }
       else{ total = "How did you manage to screw up this bad?" }
@@ -40,7 +41,7 @@
 <body>
   <h1>T1A01-Show Dakaro</h1>
   <input id="in1" type="text">
-  <select id="operator">
+  <select id="sign">
     <option value="mult">*</option>
     <option value="div">/</option>
     <option value="add">+</option>
@@ -48,7 +49,8 @@
     <option value="pwr">^</option>
   </select>
   <input id="in2" type="text">
-  <input type="button" value="=" onclick="calculate()"><br><br>
+  <input type="button" value="=" onclick="calculate('in1', 'in2')">
+  <input type="button" value="Operate on self" onclick="calculate('in1', 'in1')"><br><br>
   <div id="output"></div>
 </body>
 </html>
