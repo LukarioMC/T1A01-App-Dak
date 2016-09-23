@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello...</title>
+    <script type="text/javascript">
+        function helloworld() {
+            document.getElementById('myQuestion').innerHTML = "Hello world!";
+        }
+        
+        function moveChar(id, x, y) {
+            var myX = parseInt(document.getElementById(id).style.left);
+            document.getElementById(id).style.left = (myX + x) + 'px';
+            
+            var myY = parseInt(document.getElementById(id).style.top);
+            document.getElementById(id).style.top = (myY + y) + 'px';
+        }
+    </script>
+    <style>
+      html {
+        font-family: "Open Sans", "Wingdings", sans-serif;
+        background-image:url('img/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>Page By Dakro</h1>
+    
+    This is a webpage<br>
+    <input type="button" value="Click me now!" onclick="helloworld();"/>
+    
+    <div id="myQuestion"></div><br>
+    
+    <a href="http://lmgtfy.com/?q=The+google+machine">Click 4 Googel</a><br>
+    
+    This is <b>BOLD</b> this is <i>italic</i> and this is <em>Emphasized</em><br>
+    
+    <img src="img/shaven-pussy.jpg" width="210px"></img>
+    
+    <table border=1 align=center>
+        <tr>
+            <td>Numbers</td>
+            <td>Letters</td>
+            <td>Other</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>l</td>
+            <td>!</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>a</td>
+            <td>@</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>b</td>
+            <td>&</td>
+            <td>What</td>
+        </tr>
+    </table>
+    
+    
+    <table style="position:absolute; left:20px; top:20px; z-index: 100;">
+        <tr>
+            <td><input type="button" value="&#8598;" onclick="moveChar('myDiv01', -5,-5);"/></td>
+            <td><input type="button" value="&uarr;" onclick="moveChar('myDiv01', 0,-5);"/></td>
+            <td><input type="button" value="&#8599;" onclick="moveChar('myDiv01', 5,-5);"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="&larr;" onclick="moveChar('myDiv01', -5,0);"/></td>
+            <td></td>
+            <td><input type="button" value="&rarr;" onclick="moveChar('myDiv01', 5,0);"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="&#8601;" onclick="moveChar('myDiv01', -5,5);"/></td>
+            <td><input type="button" value="&darr;" onclick="moveChar('myDiv01', 0,5);"/></td>
+            <td><input type="button" value="&#8600;" onclick="moveChar('myDiv01', 5,5);"/></td>
+        </tr>
+    </table>
+    
+    <div id="myDiv01" style=" position:absolute; top:0px; left:200px;"><img src="img/shrek.gif" width="100px"></img></div>
+</body>
+</html>
